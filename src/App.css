@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html, body {
+  height: 100%; /* Ensure the body takes full height */
+  margin: 0; /* Remove default margin */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Allow content to grow and take available space */
 }
