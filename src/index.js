@@ -1,20 +1,10 @@
-import ReactDOM from 'react-dom/client'
-import React from 'react'
-import App from './App'
-import './styles/index.css'
-import './styles/scss/main.scss';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { saga, store } from './State_And_Store/store/InvestigationState';
-import { Provider } from 'react-redux';
-import rootSaga from './State_And_Store/saga/RootSaga';
-saga.run(rootSaga )
+import './scss/main.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-     </Provider>
-  </React.StrictMode>
+ReactDOM.render(
+        <App/>, 
+    document.getElementById('root')
 );
